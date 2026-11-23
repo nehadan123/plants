@@ -1,0 +1,259 @@
+:root{
+    --fern:#2F6B3F;
+    --forest:#1F3D2B;
+    --terra:#A8482A;
+    --cream:#FAF6EC;
+    --sun:#E0B341;
+    --ink:#1E2A22;
+    --line:#d9d2bd}
+*{
+    box-sizing:border-box
+}
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    background:var(--cream);
+    color:var(--ink);
+    font:1rem/1.6 system-ui,sans-serif
+}
+main{
+    flex:1
+}
+h1,h2,.logo{
+    font-family:Georgia,"Times New Roman",serif;
+    color:var(--forest);
+    line-height:1.2
+}
+a{
+    color:var(--terra)
+}
+a:focus,button:focus,input:focus{
+    outline:3px solid var(--terra);
+    outline-offset:2px
+}
+.container{width:100%;
+    max-width:1000px;
+    margin:0 auto;
+    padding:24px 16px
+}
+.skip{
+    position:absolute;
+    left:-999px
+}
+.skip:focus{
+    left:8px;
+    top:8px;
+    z-index:10;
+    background:#fff;
+    padding:8px
+}
+
+/* header: flexbox */
+.site-header{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    background:var(--forest)
+}
+.site-header :focus{
+    outline-color:var(--sun)
+}
+.logo{
+    color:#fff;
+    font-size:1.4rem;
+    font-weight:700;
+    text-decoration:none
+}
+.site-nav{
+    display:none;
+    flex-basis:100%;
+}
+.site-nav.is-open{
+    display:block
+}
+.site-nav ul{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.site-nav a{
+    display:block;
+    padding:10px 14px;
+    border-bottom:3px solid transparent;
+    color:#fff;
+    text-decoration:none;
+    background: transparent;
+    border-radius:999px;
+}
+.site-nav a:hover{
+    background:#3D7A4F;
+}
+.site-nav a:focus{
+    outline:3px solid var(--sun);
+    outline-offset:-3px;
+}
+.site-nav a:active{
+    background:var(--sun);
+    color:var(--forest);
+}
+.menu-toggle{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:44px;
+    height:44px;
+    padding:10px;
+    border:2px solid #fff;
+    border-radius:8px;
+    background:none;
+}
+.menu-toggle span{
+    display:block;
+    height:3px;
+    background:#fff;
+    border-radius:2px
+}
+
+/* buttons */
+.btn{
+    display:inline-block;
+    min-height:44px;
+    padding:10px 20px;
+    border:2px solid var(--fern);
+    border-radius:999px;
+    font:600 1rem system-ui,sans-serif;
+    text-decoration:none;
+    cursor:pointer
+}
+.btn-primary{
+    background:var(--fern);
+    color:#fff
+}
+.btn-primary:hover,.btn-primary:focus{
+    background:var(--forest);
+    border-color:var(--forest)
+}
+.btn-secondary{
+    background:#fff;
+    border-color:var(--terra);
+    color:var(--terra)
+}
+.btn-secondary:hover,.btn-secondary:focus{
+    background:var(--terra);
+    color:#fff
+}
+.button-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:16px
+}
+
+/* layouts: grid, one column on mobile */
+.hero,.card-grid,.detail-layout{
+    display:grid;
+    gap:16px;
+    grid-template-columns:1fr
+}
+.hero{
+    align-items:center
+}
+.plant-card,.signup{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px
+}
+.plant-card p{
+    margin:4px 0
+}
+.hero-art{
+    margin:0;
+    font-size:7rem;
+    text-align:center
+}
+.detail-art{
+    margin:0;
+    padding:32px;
+    font-size:8rem;
+    line-height:1;
+    text-align:center;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px
+}
+.note{
+    color:#5b5b5b;
+    font-size:.9rem
+}
+
+/* mailing list form */
+.signup{
+    max-width:600px
+}
+.signup h2{
+    font-size:1.2rem;
+    margin-top:0
+}
+.signup label{
+    display:block;
+    margin-top:8px
+}
+.signup input{
+    width:100%;
+    margin:4px 0 12px;
+    padding:10px;
+    border:1px solid #767676;
+    border-radius:8px;
+    font:inherit
+}
+#signup-status{
+    margin:8px 0 0;
+    color:var(--fern);
+    font-weight:600
+}
+
+.site-footer{
+    padding:16px;
+    background:var(--forest);
+    color:#fff;
+    text-align:center
+}
+.site-footer p{
+    margin:0
+}
+
+/* wider screens */
+@media (min-width:700px){
+    .site-header{
+        padding:8px 40px
+    }
+    .container{
+        padding:40px
+    }
+    .hero{
+        grid-template-columns:1.2fr 1fr
+    }
+    .card-grid,.detail-layout{
+        grid-template-columns:1fr 1fr
+    }
+    .menu-toggle{
+        display:none
+    }
+    .site-nav{
+        display:block;
+        flex-basis:auto;
+    }
+    .site-nav ul{
+        flex-direction: row;
+    }
+}

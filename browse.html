@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browse plants | Plants</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+        <a class="logo" href="index.html">Plants</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="my-plants.html">My Plants</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="container">
+            <h1>Browse plants</h1>
+            <div class="card-grid">
+                <article class="plant-card">
+                    <h2>Snake plant</h2>
+                    <p>Low light</p>
+                    <p>Water every 2 weeks</p>
+                    <a class="btn btn-primary" href="plant-detail.html">View plant</a>
+                </article>
+                <article class="plant-card">
+                    <h2>Pothos</h2>
+                    <p>Low light</p>
+                    <p>Water weekly</p>
+                    <p class="note">Full details coming soon</p>
+                </article>
+            </div>
+        </section>
+        <section class="container" aria-labelledby="signup-title">
+            <div class="signup">
+                <h2 id="signup-title">Join our mailing list to get notifications</h2>
+                <form id="signup" action="#" method="get">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <p id="signup-status" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>Plants</p>
+    </footer>
+    <script src="/js/navbar.js"></script>
+</body>
+</html>
