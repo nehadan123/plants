@@ -191,6 +191,12 @@ a:focus,button:focus,input:focus{
     border:1px solid var(--line);
     border-radius:12px
 }
+.detail-img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:12px
+}
 .note{
     color:#5b5b5b;
     font-size:.9rem
